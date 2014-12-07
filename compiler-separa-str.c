@@ -3,23 +3,23 @@
 #define _size 100
 
 //ASSEMBLY STRING
-struct astr{
+typedef struct{
     char rot[_size];
     char mne[_size];
     char op1[_size];
     char op2[_size];
-};
+}astr;
 
-struct astr separaStr();
+astr separaStr();
 
 int main(){
-    char _str[_size];
-    struct astr _astr;
+    char str_input[_size];
+    astr _astr;
     do{
         printf("Comando: ");
-        gets(_str);
+        gets(str_input);
 
-        _astr = separaStr(_str);
+        _astr = separaStr(str_input);
 
         printf("\nROT: \t%s", _astr.rot);
         printf("\nMNE: \t%s", _astr.mne);
@@ -32,9 +32,9 @@ int main(){
     return 0;
 }
 
-struct astr separaStr(char str[_size]){
+astr separaStr(char str[_size]){
     int i,j;
-    struct astr _astr;
+    astr _astr;
 
     i = j = 0;
 
