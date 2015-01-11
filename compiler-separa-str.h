@@ -12,27 +12,6 @@ typedef struct{
 
 tipoAsm separaStr();
 
-/*int main(){
-    char str_input[_size];
-    tipoAsm astr;
-
-    do{
-        printf("Comando: ");
-        gets(str_input);
-
-        astr = separaStr(str_input);
-
-        printf("\nROT: \t%s", astr.rot);
-        printf("\nMNE: \t%s", astr.mne);
-        printf("\nOP1: \t%s", astr.op1);
-        printf("\nOP2: \t%s", astr.op2);
-
-        printf("\n\n");
-    }while(1);
-
-    return 0;
-}*/
-
 tipoAsm separaStr(char str[_size]){
     int i,j;
     tipoAsm astr;
